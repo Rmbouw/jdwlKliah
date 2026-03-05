@@ -312,3 +312,7 @@
                 margin-right: auto !important;
             }
         }
+
+        .flatpickr-mobile {
+            display: none !important;
+        }
