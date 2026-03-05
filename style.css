@@ -271,19 +271,44 @@
             border-radius: 28px !important;
             margin-top: 8px;
             border: 1px solid #b7cef0;
+            position: absolute !important;
+            z-index: 9999 !important;
+            }
+
+        .flatpickr-calendar:not(.open) {
+            display: none !important;
         }
+
+        .flatpickr-calendar.open {
+            display: block !important;
+        }
+
         .flatpickr-months .flatpickr-month {
             background: #1f3460;
             border-radius: 28px 28px 0 0;
         }
+
         .flatpickr-current-month .flatpickr-monthDropdown-months {
             background: #1f3460;
             color: white;
         }
+
         .flatpickr-weekdays {
             background: #eaf1fd;
         }
+
         .flatpickr-day.selected {
             background: #1f3e7a !important;
             border-color: #1f3e7a !important;
+        }
+
+        @media (max-width: 600px) {
+            .flatpickr-calendar {
+                width: 90% !important;
+                max-width: 350px !important;
+                left: 5% !important;
+                right: auto !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
         }

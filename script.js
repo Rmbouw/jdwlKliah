@@ -16,36 +16,45 @@
         const today = new Date();
         dateSpan.textContent = formatTanggal(today);
 
-        const fp = flatpickr(dateBtn, {
-            inline: false,        
-            position: 'below',   
-            enableTime: false,   
-            dateFormat: "j F Y",  
-            defaultDate: today,
-            locale: {
-                firstDayOfWeek: 1,
-                weekdays: {
-                    shorthand: ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'],
-                    longhand: ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']
+        let fp = dateBtn._flatpickr;
+        
+        if (!fp) {
+            fp = flatpickr(dateBtn, {
+                inline: false,        
+                position: 'below',   
+                enableTime: false,   
+                dateFormat: "j F Y",  
+                defaultDate: today,
+                static: true,
+                locale: {
+                    firstDayOfWeek: 1,
+                    weekdays: {
+                        shorthand: ['Min', 'Sen', 'Sel', 'Rab', 'Kam', 'Jum', 'Sab'],
+                        longhand: ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu']
+                    },
+                    months: {
+                        shorthand: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'],
+                        longhand: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+                    }
                 },
-                months: {
-                    shorthand: ['Jan', 'Feb', 'Mar', 'Apr', 'Mei', 'Jun', 'Jul', 'Agu', 'Sep', 'Okt', 'Nov', 'Des'],
-                    longhand: ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember']
+                onChange: function(selectedDates, dateStr, instance) {
+                    if (selectedDates.length > 0) {
+                        const selected = selectedDates[0];
+                        dateSpan.textContent = formatTanggal(selected);
+                    }
+                },
+                onClose: function() {
                 }
-            },
-            onChange: function(selectedDates, dateStr, instance) {
-                if (selectedDates.length > 0) {
-                    const selected = selectedDates[0];
-                    dateSpan.textContent = formatTanggal(selected);
-                }
-            },
-            onClose: function() {
-            }
-        });
+            });
+            
+            dateBtn._flatpickr = fp;
+        }
 
-        dateBtn.addEventListener('click', function() {
+        dateBtn.removeEventListener('click', dateBtn.clickHandler);
+            dateBtn.clickHandler = function() {
             fp.open(); 
-        });
+        };
+        dateBtn.addEventListener('click', dateBtn.clickHandler);
 
         setInterval(() => {
             const sekarang = new Date();
