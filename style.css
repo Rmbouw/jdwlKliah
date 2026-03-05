@@ -324,3 +324,6 @@
         .flatpickr-mobile {
             display: none !important;
         }
+        input.flatpickr-mobile {
+            display: none !important;
+        }
