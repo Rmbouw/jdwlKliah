@@ -316,3 +316,11 @@
         .flatpickr-mobile {
             display: none !important;
         }
+
+        input[data-input] {
+            display: none !important;
+        }
+
+        .flatpickr-mobile {
+            display: none !important;
+        }

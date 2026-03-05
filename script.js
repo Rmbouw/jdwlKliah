@@ -17,7 +17,6 @@
         dateSpan.textContent = formatTanggal(today);
 
         let fp = dateBtn._flatpickr;
-        
         if (!fp) {
             fp = flatpickr(dateBtn, {
                 inline: false,        
@@ -26,6 +25,7 @@
                 dateFormat: "j F Y",  
                 defaultDate: today,
                 static: true,
+                disableMobile: "true", 
                 locale: {
                     firstDayOfWeek: 1,
                     weekdays: {
