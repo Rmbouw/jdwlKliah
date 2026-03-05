@@ -1,0 +1,289 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        body {
+            background: #252e3d;
+            min-height: 100vh;
+            padding: 1.2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .wrapper {
+            max-width: 1300px;
+            width: 100%;
+        }
+
+        .top-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            background: rgb(201, 204, 42);
+            padding: 0.7rem 1.8rem 0.7rem 1.5rem;
+            border-radius: 60px;
+            box-shadow: 0 12px 28px -12px rgba(0,30,60,0.25);
+            border: 1px solid rgba(0,0,0,0.03);
+        }
+
+        .title-section {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .title-section i {
+            font-size: 2rem;
+            color: #1d3d70;
+            background: #e3ecfc;
+            padding: 12px;
+            border-radius: 50%;
+        }
+
+        .title-section h1 {
+            font-weight: 650;
+            font-size: 1.6rem;
+            letter-spacing: -0.3px;
+            color: #0b2342;
+        }
+
+        .date-button {
+            background: linear-gradient(145deg, #1f3460, #142b50);
+            border: none;
+            color: rgb(251, 252, 249);
+            padding: 0.7rem 2rem 0.7rem 1.5rem;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            transition: 0.2s;
+            box-shadow: 0 10px 18px -8px #0f1e38;
+            border: 1px solid #3f5d8c;
+        }
+
+        .date-button i {
+            font-size: 1.5rem;
+            color: #ffd966;
+        }
+
+        .date-button:hover {
+            background: #25437a;
+            transform: scale(1.01);
+            box-shadow: 0 14px 24px -8px #0b1b32;
+        }
+
+        .date-button:active {
+            transform: scale(0.98);
+        }
+
+        .grid-hari {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.2rem;
+        }
+
+        .card-hari {
+            background: rgb(163, 170, 38);
+            border-radius: 36px;
+            padding: 1.4rem 1.2rem 1.2rem 1.2rem;
+            box-shadow: 0 18px 30px -12px rgba(0,34,68,0.15);
+            transition: all 0.2s;
+            border: 1px solid rgba(255,255,255,0.7);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .judul-hari {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #e4edfb;
+            padding-bottom: 0.9rem;
+        }
+
+        .judul-hari i {
+            font-size: 2.2rem;
+            background: #dae4f7;
+            padding: 14px;
+            border-radius: 28px;
+            color: #1e3b68;
+            width: 3.6rem;
+            text-align: center;
+        }
+
+        .judul-hari h2 {
+            font-size: 1.8rem;
+            font-weight: 650;
+            color: #112b4b;
+        }
+
+        .badge-kelas {
+            background: #c9daf5;
+            color: #122d51;
+            border-radius: 40px;
+            padding: 0.3rem 1.2rem;
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-left: 0.8rem;
+            white-space: nowrap;
+        }
+
+        .list-matkul {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex: 1;
+        }
+
+        .item-matkul {
+            background: #f7faff;
+            border-radius: 26px;
+            padding: 1rem 1.1rem;
+            border: 1px solid #e0ebfe;
+        }
+
+        .nama-matkul {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            font-size: 1.16rem;
+            color: #10243f;
+            margin-bottom: 12px;
+        }
+
+        .nama-matkul i {
+            background: #deeafd;
+            padding: 10px;
+            border-radius: 20px;
+            font-size: 1.1rem;
+            width: 2.4rem;
+            text-align: center;
+            color: #1a3a6b;
+        }
+
+        .meta-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.7rem 1rem;
+            margin-top: 6px;
+        }
+
+        .chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ecf2fc;
+            padding: 0.5rem 1rem;
+            border-radius: 40px;
+            font-size: 0.94rem;
+            color: #1a2f4e;
+            font-weight: 500;
+        }
+
+        .chip i {
+            font-size: 0.95rem;
+            color: #2e4d8a;
+            width: 1.2rem;
+        }
+
+        .kelas-solid {
+            background: #25477a;
+            color: white;
+            padding: 0.4rem 1.3rem;
+            border-radius: 40px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            box-shadow: 0 2px 6px rgba(0,20,50,0.2);
+        }
+
+        .kelas-solid i {
+            color: #ffcd7e;
+        }
+
+        .libur-konten {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #ecf3fc;
+            border-radius: 40px;
+            padding: 2rem 0.5rem;
+            text-align: center;
+            color: #1e3d64;
+            margin-top: 0.8rem;
+        }
+
+        .libur-konten i {
+            font-size: 3.8rem;
+            color: #6082b4;
+            opacity: 0.8;
+        }
+
+        .libur-konten p {
+            font-size: 1.6rem;
+            font-weight: 700;
+        }
+
+        .footer-note {
+            margin-top: 3rem;
+            color: #4c6590;
+            background: rgba(255,255,255,0.8);
+            padding: 0.8rem 2rem;
+            border-radius: 60px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 600px) {
+            .top-bar {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 1rem;
+                border-radius: 40px;
+                padding: 1.2rem;
+            }
+            .title-section h1 { font-size: 1.4rem; }
+            .date-button { justify-content: center; }
+        }
+
+        .flatpickr-calendar {
+            box-shadow: 0 20px 30px -10px #0f2640;
+            border-radius: 28px !important;
+            margin-top: 8px;
+            border: 1px solid #b7cef0;
+        }
+        .flatpickr-months .flatpickr-month {
+            background: #1f3460;
+            border-radius: 28px 28px 0 0;
+        }
+        .flatpickr-current-month .flatpickr-monthDropdown-months {
+            background: #1f3460;
+            color: white;
+        }
+        .flatpickr-weekdays {
+            background: #eaf1fd;
+        }
+        .flatpickr-day.selected {
+            background: #1f3e7a !important;
+            border-color: #1f3e7a !important;
+        }

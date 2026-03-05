@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>Beta Pung Jadwal Kuliah</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="top-bar">
+        <div class="title-section">
+            <i class="fas fa-calendar-check"></i>
+            <h1> BETA PUNG JADWAL KULIAH</h1>
+        </div>
+        <button class="date-button" id="dateButton">
+            <i class="fas fa-calendar-alt fa-fw"></i>
+            <span id="displayDate">Memuat...</span>
+            <i class="fas fa-chevron-down" style="font-size: 0.9rem;"></i>
+        </button>
+    </div>
+
+    <div class="grid-hari">
+        <div class="card-hari">
+            <div class="judul-hari">
+                <i class="fas fa-sun"></i>
+                <h2>Senin <span class="badge-kelas">I251B</span></h2>
+            </div>
+            <div class="list-matkul">
+                <div class="item-matkul">
+                    <div class="nama-matkul"><i class="fas fa-balance-scale"></i>PKN</div>
+                    <div class="meta-wrapper">
+                        <span class="chip"><i class="fas fa-clock"></i>07:00 – 09:30</span>
+                        <span class="kelas-solid"><i class="fas fa-door-closed"></i>I251B</span>
+                    </div>
+                </div>
+                <div class="item-matkul">
+                    <div class="nama-matkul"><i class="fas fa-rocket"></i>Technopreneurship</div>
+                    <div class="meta-wrapper">
+                        <span class="chip"><i class="fas fa-clock"></i>10:00 – 12:00</span>
+                        <span class="kelas-solid"><i class="fas fa-door-closed"></i>I251B</span>
+                    </div>
+                </div>
+                <div class="item-matkul">
+                    <div class="nama-matkul"><i class="fas fa-code"></i>Algoritma Pemrograman</div>
+                    <div class="meta-wrapper">
+                        <span class="chip"><i class="fas fa-clock"></i>12:30 – 15:00</span>
+                        <span class="kelas-solid"><i class="fas fa-door-closed"></i>I251B</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-hari">
+            <div class="judul-hari">
+                <i class="fas fa-mars"></i>
+                <h2>Selasa <span class="badge-kelas">I251B</span></h2>
+            </div>
+            <div class="list-matkul">
+                <div class="item-matkul">
+                    <div class="nama-matkul"><i class="fas fa-matrix"></i>Aljabar Linear</div>
+                    <div class="meta-wrapper">
+                        <span class="chip"><i class="fas fa-clock"></i>07:00 – 09:30</span>
+                        <span class="kelas-solid"><i class="fas fa-door-closed"></i>I251B</span>
+                    </div>
+                </div>
+                <div class="item-matkul">
+                    <div class="nama-matkul"><i class="fas fa-database"></i>Basis Data</div>
+                    <div class="meta-wrapper">
+                        <span class="chip"><i class="fas fa-clock"></i>12:30 – 15:00</span>
+                        <span class="kelas-solid"><i class="fas fa-door-closed"></i>I251B</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-hari">
+            <div class="judul-hari">
+                <i class="fas fa-water"></i>
+                <h2>Rabu <span class="badge-kelas">I251B</span></h2>
+            </div>
+            <div class="list-matkul">
+                <div class="item-matkul">
+                    <div class="nama-matkul"><i class="fas fa-praying-hands"></i>Pendidikan Agama 2</div>
+                    <div class="meta-wrapper">
+                        <span class="chip"><i class="fas fa-clock"></i>12:30 – 15:00</span>
+                        <span class="kelas-solid"><i class="fas fa-door-closed"></i>I251B</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-hari">
+            <div class="judul-hari">
+                <i class="fas fa-cloud-moon"></i>
+                <h2>Kamis</h2>
+            </div>
+            <div class="libur-konten">
+                <i class="fas fa-lock"></i>
+                <p>Libur</p>
+                <span style="background: #d3e2f5; border-radius: 30px; padding: 0.3rem 1.6rem;">??seng ada kelas</span>
+            </div>
+        </div>
+        <div class="card-hari">
+            <div class="judul-hari">
+                <i class="fas fa-star"></i>
+                <h2>Jumat</h2>
+            </div>
+            <div class="list-matkul">
+                <div class="item-matkul">
+                    <div class="nama-matkul"><i class="fas fa-puzzle-piece"></i>Logika Matematika</div>
+                    <div class="meta-wrapper">
+                        <span class="chip"><i class="fas fa-clock"></i>12:00 – 15:00</span>
+                        <span class="kelas-solid"><i class="fas fa-door-closed"></i>I251B</span>
+                    </div>
+                </div>
+                <div class="item-matkul">
+                    <div class="nama-matkul"><i class="fas fa-language"></i>Bahasa Inggris</div>
+                    <div class="meta-wrapper">
+                        <span class="chip"><i class="fas fa-clock"></i>15:00 – 17:30</span>
+                        <span class="kelas-solid"><i class="fas fa-door-closed"></i>I251C</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <i class="fas fa-door-open"></i> <strong>I251B</strong> (kecuali B. Inggris I251C) 
+        <i class="fas fa-bell" style="margin-left: 0.5rem;"></i>
+    </div>
+</div>
+
+ <script src="script.js"></script>
+</body>
+</html>
